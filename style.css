@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --background: #0A2D49;
+    --background-box: #173d56;
+    --contraste1: #00a1a7;
+    --contraste2: #f5f5f5
+  }
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-box);
+    color: var(--contraste2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.title {
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    transform: translate(-50% , 0);
+    white-space: nowrap;
+   
+  }
+  
+.container {
+    background-color: var(--background);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    min-width: 500px;
+    min-height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-control{
+    font-size: 1.2rem;
+    position: relative;
+    top: 3.2rem;
+}
+
+#len{
+    position: relative;
+    margin-left: 5px;
+}
+
+.pw-header {
+    padding: 1rem;
+}
+
+.pw {
+    background-color: var(--background-box);
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    position: relative;
+    padding: 1rem;
+    overflow: auto;
+    top: 3rem;
+}
+
+.pw button {
+    background-color: var(--contraste1);
+    border: none;
+    color: var(--background);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 0.25rem;
+    position: absolute;
+    top: -28px;
+    right: 0;
+    transform: translate(0, 20%);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+}
+
+.pw:hover button {
+    opacity: 1;
+    transform: translate(0, 100%);
+}
+
+.pw-body {
+    padding: 0 1rem 1rem;
+}
+
+/* ESTILIZAR CHECKBOX */
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.checkbox{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    top: 4.85rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox input [type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.otherCheckbox{
+    position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.otherCheckbox:hover{
+    background-color: #ccc;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .otherCheckbox{
+    background-color: var(--contraste1);
+}
+
+.otherCheckbox::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked ~ .otherCheckbox::after{
+    display: block;
+}
+
+.checkbox .otherCheckbox::after{
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.generate {
+    background-color: transparent;
+    border: solid 2px var(--contraste1);
+    color: var(--contraste1);
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    margin-top: 6.5rem;
+    width: 80%;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.generate:hover{
+background-color: var(--contraste1);
+color: var(--contraste2);
+transition: 0.3s;
+}

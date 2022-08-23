@@ -1,0 +1,26 @@
+@media (max-width: 1900px){
+    .title{
+        top: -2%;
+    }
+}
+
+@media (max-width:520px){
+    .container{
+        min-width: 420px;
+       
+    }
+}
+
+@media (max-width:435px){
+    .container{
+        min-width: 380px;
+       
+    }
+}
+
+@media (max-width:385px){
+    .container{
+        min-width: 320px;
+       
+    }
+}

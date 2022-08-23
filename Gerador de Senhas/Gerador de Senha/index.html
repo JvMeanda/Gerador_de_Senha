@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="media.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Gerador de Senha</h1>
+            <div class="pw-header">
+                <div class="pw">
+                    <span id="pw">lH23Zs78#Cas09@</span>
+                    <button id="copy">Copiar</button>
+                </div>
+            </div>
+            <div class="pw-body">
+                <div class="form-control">
+                    <label for="len">Tamanho da Senha</label>
+                    <input id="len" value="15" type="number" min="2" max="30" />
+                </div>
+
+                <label class="checkbox">
+                    <input type="checkbox" name="simbolo" id="simbolo">
+                    <span class="otherCheckbox" id="symbol"></span>
+                    <span class="spanSimbolo">Símbolos</span>
+                </label>
+                <label class="checkbox">
+                   <input type="checkbox" name="numero" id="numeros">
+                   <span class="otherCheckbox" id="number"></span>
+                   <span class="spanNumero">Números</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="letras Maiúsculas" id="letrasMin">
+                    <span class="otherCheckbox" id="letterUP"></span>
+                    <span class="spanLetras">Letras Maiúsculas</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" name="letras Minúsculas" id="letrasMai">
+                    <span class="otherCheckbox" id="letterLOW"></span>
+                    <span class="spanLetras">Letras Minúsculas</span>
+                </label>
+                <button class="generate" id="generate">
+                    Gerar Senha
+                </button>
+            </div>
+        </div>
+        <script src="document.js" defer></script>
+    </body>
+</html>
